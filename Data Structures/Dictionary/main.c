@@ -1,27 +1,30 @@
-#include "util.h"
+#pragma warning (disable : 4996)
+
+#include "header.h"
 
 int main()
 {
-	BTreeNode *dicionary = NULL;
-	defaultSetting(dicionary);
-
-	while (1)
+	BTreeNode *pBSTree = defaultSetting();
+	int handsomeManNum = 10;
+	for(int first = 0; ;first++)
 	{
+		int temp = 0;
 		char input = 0;
 
 		splash();
 		showMain();
 
-		input = getch();
+		if (first != 0)
+			getch();
 
-		//while (getchar() != NULL);
+		input = getch();
 
 		switch (input) {
 		case '1':
-			printData(dicionary);
+			printData(pBSTree);
 			break;
 		case '2':
-			inputData();
+			inputData(pBSTree, &handsomeManNum);
 			break;
 		case '3':
 			deleteData();

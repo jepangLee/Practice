@@ -2,14 +2,14 @@
 
 #ifndef __BINARY_TREE_H__
 #define __BINARY_TREE_H__
-#include <Windows.h>
 
-//typedef int _BTData;
+//typedef int BTData;
 
-typedef struct _BTData {
+typedef struct _BTData
+{
 	int ID;
-	char name[20];
-	char information[100];
+	char name[10];
+	char Details[50];
 }BTData;
 
 typedef struct _bTreeNode {
@@ -30,12 +30,5 @@ void preorderTraverse(BTreeNode *bt);
 void postorderTraverse(BTreeNode *bt);
 void deleteTree(BTreeNode *root);
 void deleteNode(BTreeNode *node);
-
-typedef void VisitFuncPtr(BTData data);
-
-BTreeNode *RemoveLeftSubTree(BTreeNode *bt);
-BTreeNode *RemoveRightSubTree(BTreeNode *bt);
-void ChangeLeftSubTree(BTreeNode *main, BTreeNode *sub);
-void ChangeRightSubTree(BTreeNode *main, BTreeNode *sub);
 
 #endif

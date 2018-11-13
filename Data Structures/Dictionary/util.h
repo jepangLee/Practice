@@ -1,15 +1,11 @@
 #pragma once
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <Windows.h>
-#include "BinaryTree.h"
-#include "BinarySearchTree.h"
+#include "header.h"
 
-void defaultSetting(BTreeNode *dicionary);
+BTreeNode *defaultSetting();
 void showMain();
 void splash();
 void printData(BTreeNode *pBSTree);
-void inputData();
+void inputData(BTreeNode *bst, int *count);
 void deleteData();
 void searchData();

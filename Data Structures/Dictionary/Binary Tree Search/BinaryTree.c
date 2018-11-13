@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "BinaryTree.h"
+#include "../header.h"
 
 BTreeNode * makeBTreeNode()
 {
@@ -50,7 +49,7 @@ void inorderTraverse(BTreeNode * bt) {
 		return;
 
 	inorderTraverse(bt->left);
-	printf("%3d", bt->data);
+	printf("%d. %s : %s \n", bt->data.ID, bt->data.name, bt->data.Details);
 	inorderTraverse(bt->right);
 }
 
@@ -58,7 +57,7 @@ void preorderTraverse(BTreeNode * bt) {
 	if (bt == NULL)
 		return;
 
-	printf("%3d", bt->data);
+	printf("%d. %s : %s \n", bt->data.ID, bt->data.name, bt->data.Details);
 	preorderTraverse(bt->left);
 	preorderTraverse(bt->right);
 }
@@ -69,7 +68,7 @@ void postorderTraverse(BTreeNode * bt) {
 
 	postorderTraverse(bt->left);
 	postorderTraverse(bt->right);
-	printf("%3d", bt->data);
+	printf("%d. %s : %s \n", bt->data.ID, bt->data.name, bt->data.Details);
 }
 
 void deleteTree(BTreeNode * root) {
@@ -83,36 +82,4 @@ void deleteTree(BTreeNode * root) {
 
 void deleteNode(BTreeNode * node) {
 	free(node);
-}
-
-BTreeNode * RemoveLeftSubTree(BTreeNode * bt)
-{
-	BTreeNode *delNode = NULL;
-
-	if (bt != NULL) {
-		delNode = bt->left;
-		bt->left = NULL;
-	}
-	return delNode;
-}
-
-BTreeNode * RemoveRightSubTree(BTreeNode * bt)
-{
-	BTreeNode *delNode = NULL;
-
-	if (bt != NULL) {
-		delNode = bt->left;
-		bt->right = NULL;
-	}
-	return delNode;
-}
-
-void ChangeLeftSubTree(BTreeNode * main, BTreeNode * sub)
-{
-	main->left = sub;
-}
-
-void ChangeRightSubTree(BTreeNode * main, BTreeNode * sub)
-{
-	main->right = sub;
 }
