@@ -355,7 +355,7 @@ MigrationBackup/
 
 # solution files
 
-*.sin
+*.sln
 *.vcxproj
 *.vcxproj.filters
 
