@@ -353,4 +353,10 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
+# solution files
+
+*.sin
+*.vcxproj
+*.vcxproj.filters
+
 # End of https://www.gitignore.io/api/visualstudio
