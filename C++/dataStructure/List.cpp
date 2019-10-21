@@ -1,4 +1,4 @@
-#include "../Cppheader.h"
+#include "../Cpp.h"
 
 ArrayList::ArrayList() {
 	this->Data[0] = -1;
@@ -387,3 +387,15 @@ Node *DoublyLinkedList::LSerchLastNode()
 		return LSerchLastNode();
 	}
 }
+? 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

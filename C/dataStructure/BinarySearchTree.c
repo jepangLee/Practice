@@ -1,4 +1,4 @@
-#include "../header.h"
+#include "BinarySearchTree.h"
 
 void BSTMakeAndInit(BTreeNode *pRoot) {
 	pRoot = NULL;

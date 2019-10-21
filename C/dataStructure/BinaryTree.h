@@ -1,9 +1,7 @@
-#pragma once
+#ifndef BINARY_TREE_H
+#define BINARY_TREE_H
 
-#ifndef __BINARY_TREE_H__
-#define __BINARY_TREE_H__
-
-//typedef int BTData;
+#include "../C.h"
 
 typedef struct _BTData
 {
