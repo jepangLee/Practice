@@ -1,2 +1,2 @@
 # Practice
-c++ / c practice repository
+coding practice repository
